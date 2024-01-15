@@ -12,13 +12,23 @@ app.set('view engine', 'ejs');
 
 //ejs.render(str, data, options);
 
+const logger = (req,res,next) => {
+    console.log(`Request was made at :${req.method}${req.url}`);
+    next();
+}
+
+app.use(logger);
+
 //templates wip
 app.get('/', (req, res) => {
-    res.render("pages/index")
-})
+    const content = "Hello this is me"
+    res.render('pages/index', {
+        content: content,
+      });
+    });
 
 app.get('/about', function (req, res) {
-//    res.render('pages/about');
+    res.render('pages/about');
 });
 
 
