@@ -12,6 +12,7 @@ app.set('view engine', 'ejs');
 
 //ejs.render(str, data, options);
 
+//templates wip
 app.get('/', (req, res) => {
     res.render("pages/index")
 })
