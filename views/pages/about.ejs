@@ -3,6 +3,7 @@
 
 <head>
     <%-include('../partials/head'); %>
+    <script defer src="../../index.js"></script>
 </head>
 
 <body class="container">
@@ -16,7 +17,10 @@
             <h1>This Is My About PAGE</h1>
             <p>Using EJS for About</p>
             <p>This is just an about page just because</p>
-
+            <img src=<%= img%> >This is an image</img>
+            <form action = "/about" method = "post">
+            <input type="submit" value="Download">
+        </form>
         </div>
     </main>
 
